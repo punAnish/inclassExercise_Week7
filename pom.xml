@@ -29,7 +29,22 @@
     </dependency>
   </dependencies>
   <build>
+
+    <finalName>calculator</finalName>
     <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.0</version> <!-- Replace with the latest version available -->
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>org.example.Calculator</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
@@ -51,6 +66,7 @@ available -->
           </execution>
         </executions>
       </plugin>
+
     </plugins>
   </build>
 </project>
